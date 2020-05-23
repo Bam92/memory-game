@@ -1,5 +1,6 @@
 {
-  "name": "memory",
+  "name": "memory-game",
+  "author": {"name":"Abel"},
   "version": "0.1.0",
   "private": true,
   "dependencies": {

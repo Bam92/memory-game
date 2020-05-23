@@ -5,8 +5,8 @@ import './Card.css';
 
 const HIDDEN_SYMBOL = '?';
 
-const Card = ({ card, feeback, onClick }) => (
-    <div className={`card ${feeback}`} onClick={() => onClick(card)}>
+const Card = ({ card, feeback, index, onClick }) => (
+    <div className={`card ${feeback}`} onClick={() => onClick(index)}>
         <span className='symbol'>
             {feeback === 'hidden' ? HIDDEN_SYMBOL : card}
         </span>
@@ -18,9 +18,10 @@ Card.propTypes = {
     feeback: PropTypes.oneOf([
         'hidden',
         'justMatched',
-        'justMismatched',
+        'justMissmatched',
         'visible'
     ]).isRequired,
+    index: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 
